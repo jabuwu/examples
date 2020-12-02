@@ -23,7 +23,6 @@ data "aws_acm_certificate" "certificate" {
 module "s3-website" {
   source   = "./s3_website"
   bucket   = local.bucket
-  domain   = local.domain
   record   = local.record
   zone_id  = local.zone_id
   cert_arn = local.cert_arn
