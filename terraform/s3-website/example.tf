@@ -20,7 +20,7 @@ data "aws_acm_certificate" "certificate" {
   statuses = ["ISSUED"]
 }
 
-module "s3-website" {
+module "s3_website" {
   source   = "./s3_website"
   bucket   = local.bucket
   record   = local.record
